@@ -89,3 +89,29 @@ footer a {
 footer a:hover {
   color: #ff0505;
 }
+
+@media (max-width: 800px) {
+  nav {
+      justify-content: space-between;
+  }
+}
+
+@media (max-width: 600px) {
+  h1 {
+      text-align: center;
+  }
+
+  nav {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  nav a {
+      font-size: 1.1em;
+  }
+}
+
+@media (max-width: 400px) {
+  table {
+      font-size: 0.9em;
+  }
