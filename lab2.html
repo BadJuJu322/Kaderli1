@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Собрать ланч</title>
-    <link rel="stylesheet" href="styles2.css">
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="lunch-styles.css">
 </head>
 <body>
     <header>
         <h1>Food Construct</h1>
         <nav>
-            <a href="index.html">О нас</a>
+            <a href="https://badjuju322.github.io/Kaderli1/">О нас</a>
             <a href="lunch.html" class="active">Собрать ланч</a>
             <a href="orders.html">Заказы</a>
             <a href="contacts.html">Контакты</a>
@@ -100,6 +100,84 @@
             </div>
         </section>
     </main>
+        <div class="order-form">
+            <h2>Сделать заказ</h2>
+            <form action="https://httpbin.org/post" method="POST">
+                <div class="form-columns">
+                    <div class="form-column">
+                        <h3>Ваш заказ</h3>
+                        <label for="soup">Суп:</label>
+                        <select id="soup" name="soup" required>
+                            <option value="">--Выберите суп--</option>
+                            <option value="gastino">Гаспачо</option>
+                            <option value="mushroom_soup">Грибной суп-пюре</option>
+                            <option value="nereoksivni_soup">Норвежский суп</option>
+                        </select>
+    
+                        <label for="main">Главное блюдо:</label>
+                        <select id="main" name="main" required>
+                            <option value="">--Выберите главное блюдо--</option>
+                            <option value="fried_potatoes">Жареная картошка с грибами</option>
+                            <option value="lasagna">Лазанья</option>
+                            <option value="chicken_cutlet">Котлеты из курицы с картофельным пюре</option>
+                        </select>
+    
+                        <label for="drink">Напиток:</label>
+                        <select id="drink" name="drink" required>
+                            <option value="">--Выберите напиток--</option>
+                            <option value="orange_juice">Апельсиновый сок</option>
+                            <option value="apple_juice">Яблочный сок</option>
+                            <option value="carrot_juice">Морковный сок</option>
+                        </select>
+    
+                        <label for="comments">Комментарии к заказу:</label>
+                        <textarea id="comments" name="comments"></textarea>
+                    </div>
+    
+                    <div class="form-column">
+                        <h3>Ваши данные</h3>
+                        <label for="name">Имя:</label>
+                        <input type="text" id="name" name="name" required>
+    
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+    
+                        <label for="subscribe">
+                            <input type="checkbox" id="subscribe" name="subscribe" checked>
+                            Получать информацию о скидках и акциях
+                        </label>
+    
+                        <label for="phone">Номер телефона:</label>
+                        <input type="tel" id="phone" name="phone" required>
+    
+                        <label for="address">Адрес доставки:</label>
+                        <input type="text" id="address" name="address" required>
+                        <i class="form-note">Доставка осуществляется только по Москве</i>
+    
+                        <fieldset>
+                            <legend>Время доставки:</legend>
+                            <label>
+                                <input type="radio" name="delivery_time" value="asap" required>
+                                Как можно скорее
+                            </label>
+                            <label>
+                                <input type="radio" name="delivery_time" value="specific">
+                                К указанному времени
+                            </label>
+                        </fieldset>
+    
+                        <label for="specific_time">Укажите время доставки:</label>
+                        <input type="time" id="specific_time" name="specific_time" min="07:00" max="23:00" step="300">
+                        <i>Доступное время доставки с 07:00 до 23:00</i>
+                    </div>
+                </div>
+    
+                <div class="form-buttons">
+                    <button type="reset">Сбросить</button>
+                    <button type="submit">Отправить</button>
+                </div>
+            </form>
+        </div>
 
     <footer>
         <p>Позвонить нам +7-000-000-00-00</p>
